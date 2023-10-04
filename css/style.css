@@ -1,5 +1,11 @@
 :root {
-
+  --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+  --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+  --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+  --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+  --font-size-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+  --font-size-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+  --font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
 }
 
 * {
@@ -31,3 +37,119 @@ img {
 
 
 
+.wrapper {
+  margin: 1.5em;
+}
+
+
+#header > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul li {
+  padding-left: 1.25em;
+  text-transform: uppercase;
+}
+
+nav ul li a:link, nav ul li a:visited {
+  color: black;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+  color: red;
+}
+
+#feature img {
+  background-color: white;
+  border-radius: 10px;
+  margin: 1.5rem;
+}
+
+#feature .feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.ice-cream-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2.5em;
+  gap: 1em;
+}
+
+#bite-me h2 {
+  text-transform: uppercase;
+}
+
+#bite-me a:link, a:visited {
+  color: white;
+  background-color: black;
+  border: 2px solid black;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+#bite-me a:hover {
+  color: black;
+  background-color: white;
+  border: 2px solid black;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+#behind-dough h1 {
+  text-align: center;
+}
+
+
+
+#reviews {
+  background-color: black;
+  padding: 0;
+}
+
+#reviews h1 {
+  color: white;
+  text-align: center;
+  padding-top: 1em;
+}
+
+#reviews p {
+  color: white;
+  padding: 1em 4em;
+}
+
+
+#grid {
+  text-align: center;
+}
+
+.ice-cream-grid article {
+  background-color: lightgray;
+  border-radius: 10px;
+  padding: 0;
+  text-align: center;
+}
+
+.ice-cream-grid article img {
+  border-radius: 10px 10px 0 0;
+}
+
+
+
+
+footer {
+  text-align: center;
+  padding: 1em;
+}

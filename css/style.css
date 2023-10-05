@@ -64,29 +64,16 @@ nav ul li a:hover, nav ul li a:focus {
   color: #ED1E2C;
 }
 
-.img-one, .img-two, .img-three, .img-four {
-  padding: 0;
-}
-
 #feature img {
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 0;
   margin: 1.5rem;
-  width: 100%;
-}
-
-#feature-grid {
-  padding: 0;
+  border-radius: 2%;
 }
 
 #feature img:hover {
   transition-duration: 1s;
   transform: scale(1.2);
-}
-
-.three {
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1em;
 }
 
 .ice-cream-grid {
@@ -167,12 +154,24 @@ footer {
   padding: 1em;
 }
 
+@media (max-width: 768px) {
+  .three {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .three img {
+    width: auto;
+  }
+
+}
+
+
 @media (min-width: 768px) {
   #feature-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1em;
-    transition-duration: 1s;
     padding: 0;
     margin-bottom: 0;
   }
@@ -194,7 +193,6 @@ footer {
   }
 }
 
-
 @media (min-width: 960px) {
   #intro {
     display: flex;
@@ -211,5 +209,4 @@ footer {
   body {
     background-color: white;
   }
- 
 }

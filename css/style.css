@@ -35,12 +35,9 @@ img {
   max-width: 100%;
 }
 
-
-
 .wrapper {
-  margin: 1.5em;
+  margin: 0 1em;
 }
-
 
 #header > div {
   display: flex;
@@ -64,26 +61,40 @@ nav ul li a:link, nav ul li a:visited {
 }
 
 nav ul li a:hover, nav ul li a:focus {
-  color: red;
+  color: #ED1E2C;
+}
+
+.img-one, .img-two, .img-three, .img-four {
+  padding: 0;
 }
 
 #feature img {
-  background-color: white;
+  background-color: #fff;
   border-radius: 10px;
   margin: 1.5rem;
+  width: 100%;
 }
 
-#feature .feature-grid {
-  display: grid;
+#feature-grid {
+  padding: 0;
+}
+
+#feature img:hover {
+  transition-duration: 1s;
+  transform: scale(1.2);
+}
+
+.three {
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 1.5rem;
+  gap: 1em;
 }
 
 .ice-cream-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-top: 2.5em;
+  margin: 2.5em;
   gap: 1em;
+  padding: 0;
 }
 
 #bite-me h2 {
@@ -91,21 +102,26 @@ nav ul li a:hover, nav ul li a:focus {
 }
 
 #bite-me a:link, a:visited {
-  color: white;
-  background-color: black;
-  border: 2px solid black;
+  color: #fff;
+  background-color: #000;
+  border: 2px solid #000;
   padding: 0.5em 1em;
   text-decoration: none;
   border-radius: 5px;
+
+  transition-duration: 1s;
 }
 
 #bite-me a:hover {
-  color: black;
-  background-color: white;
-  border: 2px solid black;
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #000;
   padding: 0.5em 1em;
   text-decoration: none;
   border-radius: 5px;
+
+  transition-property: all;
+  transition-timing-function: ease-in-out;
 }
 
 #behind-dough h1 {
@@ -113,20 +129,19 @@ nav ul li a:hover, nav ul li a:focus {
 }
 
 
-
 #reviews {
-  background-color: black;
+  background-color: #000;
   padding: 0;
 }
 
 #reviews h1 {
-  color: white;
+  color: #fff;
   text-align: center;
   padding-top: 1em;
 }
 
 #reviews p {
-  color: white;
+  color: #fff;
   padding: 1em 4em;
 }
 
@@ -136,7 +151,7 @@ nav ul li a:hover, nav ul li a:focus {
 }
 
 .ice-cream-grid article {
-  background-color: lightgray;
+  background-color: #FAFAF9;
   border-radius: 10px;
   padding: 0;
   text-align: center;
@@ -147,9 +162,54 @@ nav ul li a:hover, nav ul li a:focus {
 }
 
 
-
-
 footer {
   text-align: center;
   padding: 1em;
+}
+
+@media (min-width: 768px) {
+  #feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    transition-duration: 1s;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  #dough {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+  }
+
+  #review {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .ice-cream-grid {
+    display: flex;
+    grid-template-columns: 1fr, 1fr, 1fr, 1fr;
+  }
+}
+
+
+@media (min-width: 960px) {
+  #intro {
+    display: flex;
+    grid-template-columns: 1fr, 1fr;
+    padding: 1em;
+  }
+}
+
+@media (min-width: 1080px) {
+  .wrapper {
+    margin: 0 .5em;
+  }
+
+  body {
+    background-color: white;
+  }
+ 
 }

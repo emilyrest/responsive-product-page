@@ -72,8 +72,9 @@ nav ul li a:hover, nav ul li a:focus {
 }
 
 #feature img:hover {
+  opacity: 0.8;
   transition-duration: 1s;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .ice-cream-grid {
@@ -81,11 +82,37 @@ nav ul li a:hover, nav ul li a:focus {
   grid-template-columns: 1fr 1fr;
   margin: 2.5em;
   gap: 1em;
-  padding: 0;
+	opacity: 1;
+}
+
+.ice-cream-grid img:hover {
+  opacity: 0.8;
+  transition-duration: 1s;
+  border-radius: 2%;
+}
+
+.ice-cream-grid article:hover {
+  transform: scale(1.2);
+  transition-duration: 1s;
+}
+
+#bite-me {
+  padding-left: 3em;
+}
+
+#bite-me h1 {
+  font-size: 30pt;
+  font-weight: 500;
 }
 
 #bite-me h2 {
   text-transform: uppercase;
+  font-size: 12pt;
+}
+
+#bite-me h3 {
+  font-weight: lighter;
+  font-size: 10pt;
 }
 
 #bite-me a:link, a:visited {
@@ -95,7 +122,6 @@ nav ul li a:hover, nav ul li a:focus {
   padding: 0.5em 1em;
   text-decoration: none;
   border-radius: 5px;
-
   transition-duration: 1s;
 }
 
@@ -155,17 +181,17 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .three {
-    display: flex;
-    justify-content: space-between;
+  #feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5em;
+    margin: 0;
   }
 
-  .three img {
-    width: auto;
+  #img-one {
+    grid-column: 1 / span 3;
   }
-
 }
-
 
 @media (min-width: 768px) {
   #feature-grid {
@@ -191,6 +217,10 @@ footer {
     display: flex;
     grid-template-columns: 1fr, 1fr, 1fr, 1fr;
   }
+
+  #bite-me {
+    padding: none;
+  }
 }
 
 @media (min-width: 960px) {
@@ -203,7 +233,8 @@ footer {
 
 @media (min-width: 1080px) {
   .wrapper {
-    margin: 0 .5em;
+    margin: 0.5em;
+    padding: 0 10em;
   }
 
   body {

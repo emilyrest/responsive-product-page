@@ -66,9 +66,7 @@ nav ul li a:hover, nav ul li a:focus {
 
 #feature img {
   background-color: #fff;
-  border-radius: 0;
-  margin: 1.5rem;
-  border-radius: 2%;
+  border-radius: 10px;
 }
 
 #feature img:hover {
@@ -80,7 +78,6 @@ nav ul li a:hover, nav ul li a:focus {
 .ice-cream-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 2.5em;
   gap: 1em;
 	opacity: 1;
 }
@@ -88,7 +85,7 @@ nav ul li a:hover, nav ul li a:focus {
 .ice-cream-grid img:hover {
   opacity: 0.8;
   transition-duration: 1s;
-  border-radius: 2%;
+  border-radius: 10px;
 }
 
 .ice-cream-grid article:hover {
@@ -141,6 +138,9 @@ nav ul li a:hover, nav ul li a:focus {
   text-align: center;
 }
 
+#behind-dough {
+  max-width: 100%;
+}
 
 #reviews {
   background-color: #000;
@@ -158,13 +158,8 @@ nav ul li a:hover, nav ul li a:focus {
   padding: 1em 4em;
 }
 
-
-#grid {
-  text-align: center;
-}
-
 .ice-cream-grid article {
-  background-color: #FAFAF9;
+  background-color: lightgray;
   border-radius: 10px;
   padding: 0;
   text-align: center;
@@ -174,6 +169,9 @@ nav ul li a:hover, nav ul li a:focus {
   border-radius: 10px 10px 0 0;
 }
 
+#grid {
+  text-align: center;
+}
 
 footer {
   text-align: center;
@@ -198,46 +196,59 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1em;
-    padding: 0;
-    margin-bottom: 0;
   }
 
   #dough {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5em;
+    place-items: center;
   }
 
   #review {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    padding: 1em 0;
   }
 
   .ice-cream-grid {
     display: flex;
     grid-template-columns: 1fr, 1fr, 1fr, 1fr;
+    justify-content: center;
+    
+  }
+
+  .ice-cream-grid img {
+    max-width: auto;
   }
 
   #bite-me {
     padding: none;
   }
+
 }
 
 @media (min-width: 960px) {
   #intro {
     display: flex;
     grid-template-columns: 1fr, 1fr;
-    padding: 1em;
   }
+
 }
 
 @media (min-width: 1080px) {
   .wrapper {
-    margin: 0.5em;
-    padding: 0 10em;
+    padding: 0 15em;
+    align-items: center;
   }
 
   body {
     background-color: white;
   }
+
+  #dough {
+    max-width: 90%;
+    padding: 0;
+  }
+
 }
